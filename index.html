@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Manager</title>
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/forms.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-inner">
+      <div class="brand">
+        <img src="assets/logo.svg" alt="Logo" class="brand-logo" />
+        <h1 class="brand-title">Task Manager</h1>
+      </div>
+      <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">🌙</button>
+    </div>
+  </header>
+
+  <main class="app-main">
+    <section class="task-input-section">
+      <form id="task-form" class="task-form">
+        <input
+          type="text"
+          id="task-input"
+          class="task-input"
+          placeholder="What needs to be done?"
+          maxlength="120"
+          autocomplete="off"
+        />
+        <button type="submit" class="btn btn-primary">Add</button>
+      </form>
+    </section>
+
+    <section class="filters-section">
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="active">Active</button>
+        <button class="filter-btn" data-filter="completed">Completed</button>
+      </div>
+      <span id="task-count" class="task-count">0 tasks</span>
+    </section>
+
+    <section class="tasks-section">
+      <ul id="task-list" class="task-list"></ul>
+      <p id="empty-state" class="empty-state">No tasks yet. Add one above! 🎯</p>
+    </section>
+  </main>
+
+  <div id="toast-container" class="toast-container"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/state.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/tasks.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/notifications.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/keyboard.js"></script>
+  <script src="js/events.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
